@@ -17,7 +17,7 @@
 
     <div class="d-flex flex-column align-items-center justify-content-center mt-5">
         <h1 class="text-center">Data Nilai Mahasiswa</h1>
-        <a href="{{ route('nilai-mahasiswa.create') }}" class="btn btn-primary mt-3">(+) Create gallery</a>
+        <a href="{{ route('nilai-mahasiswa.create') }}" class="btn btn-primary mt-3">(+) Create Data</a>
     </div>
 
     @if ($message = Session::get('message'))

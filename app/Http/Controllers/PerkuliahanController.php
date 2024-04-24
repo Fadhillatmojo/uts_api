@@ -15,6 +15,7 @@ class PerkuliahanController extends Controller
         $nilai_mahasiswa = Perkuliahan::select('perkuliahan.id_perkuliahan', 'mahasiswa.nim', 'mahasiswa.nama', 'mahasiswa.alamat', 'matakuliah.kode_mk', 'matakuliah.nama_mk', 'matakuliah.sks', 'perkuliahan.nilai')
             ->join('mahasiswa', 'perkuliahan.nim', '=', 'mahasiswa.nim')
             ->join('matakuliah', 'perkuliahan.kode_mk', '=', 'matakuliah.kode_mk')
+            ->orderBy('perkuliahan.id_perkuliahan')
             ->get();
         return response()->json($nilai_mahasiswa);
     }
